@@ -1,0 +1,26 @@
+.mainIntro{
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5rem;
+	font-size: 2.5rem;
+	line-height: 1.25;
+
+	&__picture{
+		max-width: 20rem;
+		height: auto;
+	}
+
+	&__text{
+		max-width: 75%;
+		align-self: center;
+		font-weight: 200;
+	}
+
+	&__strong, &__date{
+		font-weight: 400;
+	}
+
+
+}

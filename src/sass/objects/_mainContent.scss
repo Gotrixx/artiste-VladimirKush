@@ -1,0 +1,14 @@
+.mainContent, .mainContentGalery{
+	flex: 1;
+	margin: 0 auto;
+	padding: 2rem 5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.mainContent{
+	max-width: 60%;
+	margin-left: 40%;
+}

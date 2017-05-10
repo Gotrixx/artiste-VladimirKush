@@ -1,0 +1,44 @@
+// .lightBox{
+// 	&__item{
+// 		display: none;
+// 		z-index: 100;
+// 		margin: auto;
+// 		background: rgba($mainColor, .7);
+// 		border: 1px solid red;
+// 	}
+
+// 	&__pic{
+// 		display: block;
+// 		margin: 0 auto;
+// 	}
+
+// 	&__item:target{
+// 		outline: none;
+// 		display: block;
+// 	}
+// }
+
+.lightBox{
+	display: none;
+	z-index: 100;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	background: rgba($mainColor, .7);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	&__pic{
+		display: block;
+		margin: 0 auto;
+		transform: translateY(20rem);
+	}
+
+	&:target{
+		outline: none;
+		display: block;
+		transform: scale(1.5);
+	}
+}

@@ -1,0 +1,80 @@
+.contact{
+	font-size: 3rem;
+	margin-bottom: 5rem;
+	&__title{
+		display: block;
+		width: 50rem;
+		margin: 0 auto;
+		margin-bottom: 2.5rem;
+		text-align: center;
+		font-size: 4rem;
+		color: $titleColor;
+	}
+
+	&__form{
+		width: 100%;
+	}
+
+	&__champs{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
+		margin-bottom: 2rem;
+	}
+
+	&__label{
+		width: 15rem;
+		height: 3rem;
+		background: $linkColor;
+		padding: .5rem;
+		text-align: left;
+		border: 2px solid $linkColor;
+	}
+
+	&__input{
+		width: 40rem;
+		height: 3rem;
+		font-size: 2rem;
+		padding: .5rem;
+		margin-left: 0;
+		border: 2px solid $linkColor;
+	}
+
+	&__textarea{
+		width: 40rem;
+		height: 30rem;
+		font-family: $mainFonts;
+		font-size: 2rem;
+		padding: .5rem;
+		border: 2px solid $linkColor;
+	}
+
+	&__input:focus, &__textarea:focus{
+		outline: none;
+		background: rgba($linkColor, .1);
+	}
+
+	&__submit{
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		background: $linkColor;
+		width: 57.8rem;
+		height: 6rem;
+		font-family: $mainFonts;
+		font-size: 3rem;
+		border: none;
+		border-radius: none;
+		box-shadow: none;
+		transition: box-shadow .251s ease-in-out;
+	}
+
+	&__submit:hover{
+		box-shadow: 0 0 .5rem $shadow;
+	}
+
+	&__submit:hover, &__label:hover{
+		cursor: pointer;
+	}
+}

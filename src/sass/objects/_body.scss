@@ -1,0 +1,24 @@
+body{
+	background: $mainColor;
+	color: $textColor;
+	font-family: $mainFonts;
+
+	display: flex;
+	justify-content: space-between;
+
+	min-height: 100vh;
+
+	&::-webkit-scrollbar-track{
+		background-color: $mainColor;
+		// border-left: .1rem solid $linkColor;
+	}
+
+	&::-webkit-scrollbar{
+		width: 1rem;
+	}
+
+	&::-webkit-scrollbar-thumb{
+		background-color: $linkColor;
+		// background-color: rgba($linkColor, .3);
+	}
+}
