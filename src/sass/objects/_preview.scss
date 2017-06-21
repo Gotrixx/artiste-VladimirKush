@@ -4,13 +4,13 @@
 	min-height: 100vh;
 	border-right: .1rem solid rgba( $titleColor, .5 );
 
-	// animation-name: preview;
- //    animation-duration: 20s;
- //    animation-iteration-count: infinite;
- //    animation-timing-function: ease-in-out;
- 	background: transparent url('../img/branchClippers.jpg') left top no-repeat;
+	animation-name: preview;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+ 	// background: transparent url('../img/branchClippers.jpg') left top no-repeat;
 	background-size: cover;
-	background-position: center center;
+	background-position: 98% center;
 
     // TODO: Mettre une fonction play/pause
 }

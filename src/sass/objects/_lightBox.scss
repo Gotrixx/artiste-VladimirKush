@@ -33,12 +33,17 @@
 	&__pic{
 		display: block;
 		margin: 0 auto;
-		transform: translateY(20rem);
+		padding: 1rem;
+		border: .5rem solid rgba($linkColor, .7);
+		background: rgba($mainColor, .7);
 	}
 
 	&:target{
 		outline: none;
 		display: block;
-		transform: scale(1.5);
+	}
+
+	&:target &__pic{
+		transform: scale(1.4) translateY(20vh);
 	}
 }

@@ -46,14 +46,14 @@ gulp.task( "js", function() {
 
 // --- Watch tasks
 gulp.task( "watch", function() {
-	gulp.watch( "src/img/**", [ "images" ] );
-	gulp.watch( "src/img/**/**", [ "images/galery" ] );
+	// gulp.watch( "src/img/**", [ "images" ] );
+	// gulp.watch( "src/img/**/**", [ "images/galery" ] );
 	gulp.watch( "src/pug/**/*.pug", [ "html" ] );
 	gulp.watch( "src/sass/**/*.scss", [ "css" ] );
 	gulp.watch( "src/js/**/*.js", [ "js" ] );
 } )
 
 // --- Aliases
-gulp.task( "default", [ "images", "css", "html", "js" ] );
-// gulp.task( "default", [ "css", "html"] );
+// gulp.task( "default", [ "images", "css", "html", "js" ] );
+gulp.task( "default", [ "css", "html", "js"] );
 gulp.task( "work", [ "default", "watch" ] );

@@ -1,1 +1,10 @@
 $mainFonts: 'Futura LT', Verdana, sans-serif;
+$titleFonts: 'condimentregular', serif;
+
+@font-face {
+    font-family: 'condimentregular';
+    src: url('../fonts/condiment-regular-webfont.woff2') format('woff2'),
+         url('../fonts/condiment-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

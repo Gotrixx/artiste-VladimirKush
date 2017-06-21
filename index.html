@@ -14,23 +14,26 @@
         <p class="hidden">Quelques images</p>
     </div>
 
-    <div class="mainContent">
+    <div class="mainContent">        
     	<h1 role="heading" aria-level="1" class="mainTitle"><a href="#" class="mainTitle__link">Vladimir Kush <span class="mainTitle__subtitle">l'exposition</span></a></h1>
+
+        
+        <nav class="mainNav">
+            <h2 role="heading" aria-level="2" class="mainNav__title hidden">Menu</h2>
+            <ul class="mainNav__list">
+                <li class="mainNav__item"><a href="index.html" class="mainNav__link">Accueil</a></li>
+                <li class="mainNav__item"><a href="html/bio.html" class="mainNav__link">Biographie</a></li>
+                <li class="mainNav__item"><a href="html/galery.html" class="mainNav__link">Galerie</a></li>
+                <li class="mainNav__item"><a href="html/contact.html" class="mainNav__link">Contact</a></li>
+            </ul>
+        </nav>
+
         <div class="mainIntro">
             <img src="assets/img/bio1.jpg" alt="Vladimir Kush" class="mainIntro__picture">
             <p class="mainIntro__text">
                 <strong class="mainIntro__strong">Vladimir Kush</strong>, peintre surréaliste, organise une exposition pour dévoiler ses toutes dernières Œuvres. Rendez-vous en <time datetime="2017-06" class="mainIntro__date">juin 2017</time> à Brussel Expo.
             </p>
         </div>
-    	<nav class="mainNav">
-    		<h2 role="heading" aria-level="2" class="mainNav__title hidden">Menu</h2>
-    		<ul class="mainNav__list">
-    			<li class="mainNav__item"><a href="index.html" class="mainNav__link">Accueil</a></li>
-    			<li class="mainNav__item"><a href="html/bio.html" class="mainNav__link">Biographie</a></li>
-    			<li class="mainNav__item"><a href="html/galery.html" class="mainNav__link">Galerie</a></li>
-    			<li class="mainNav__item"><a href="html/contact.html" class="mainNav__link">Contact</a></li>
-    		</ul>
-    	</nav>
 
         <section class="utils">
             <h2 role="heading" aria-level="2" class="utils__title">Informations pratiques</h2>
@@ -38,11 +41,16 @@
                 <ul class="utils__list">
                     <li class="utils__item"><strong class="utils__strong">Adresse&nbsp;:</strong> Place de belgique 1, 1020 Bruxelles</li>
                     <li class="utils__item"><strong class="utils__strong">Téléphone&nbsp;:</strong> +32(0)80 12 13 14</li>
-                    <li class="utils__item"><strong class="utils__strong">Horaire&nbsp;:</strong> du mardi au vendredi 9h&nbsp;-&nbsp;17h&nbsp;/&nbsp;samedi et dimanche 8h&nbsp;-&nbsp;18h&nbsp;/&nbsp;fermé le lundi</li>
-                    <li class="utils__item"><strong class="utils__strong">Entrée&nbsp;:</strong> Adultes 6€&nbsp;&ndash;&nbsp;Enfants 4€</li>
-                    <!-- <li class="utils__item"></li> -->
+                    <li class="utils__item"><strong class="utils__strong">Horaire&nbsp;:</strong>
+                        <ul class="utils__list subList">
+                            <li class="utils__item subItem">du mardi au vendredi <em class="utils__em">9h</em>&nbsp;-&nbsp;<em class="utils__em">17h</em></li>
+                            <li class="utils__item subItem">samedi et dimanche <em class="utils__em">8h</em>&nbsp;-&nbsp;<em class="utils__em">18h</em></li>
+                            <li class="utils__item subItem"><em class="utils__em">fermé</em> le lundi</li>
+                        </ul>
+                    </li>
+                    <li class="utils__item"><strong class="utils__strong">Entrée&nbsp;:</strong> Adultes <em class="utils__em">6€</em>&nbsp;&ndash;&nbsp;Enfants <em class="utils__em">4€</em></li>
                 </ul>
-                <div class="maps">
+                <div class="utils__maps">
                     <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJYqnS37Ew0cRq1RpVKQmk94&key=AIzaSyARc-p_9_pPs4bBFUsTloir7wb16RnIqEs"></iframe>
                 </div>
             </div>

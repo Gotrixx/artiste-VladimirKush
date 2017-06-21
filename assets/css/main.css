@@ -1,5 +1,70 @@
 /* SETTINGS */
+@font-face {
+  font-family: 'condimentregular';
+  src: url("../fonts/condiment-regular-webfont.woff2") format("woff2"), url("../fonts/condiment-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /* TOOLS */
+@-webkit-keyframes preview {
+  0% {
+    background: transparent url("../img/branchClippers.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  30% {
+    background: transparent url("../img/branchClippers.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  33% {
+    background: transparent url("../img/cirqueHorse.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  63% {
+    background: transparent url("../img/cirqueHorse.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  66% {
+    background: transparent url("../img/ascend.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  97% {
+    background: transparent url("../img/ascend.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  100% {
+    background: transparent url("../img/branchClippers.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; } }
+@keyframes preview {
+  0% {
+    background: transparent url("../img/branchClippers.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  30% {
+    background: transparent url("../img/branchClippers.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  33% {
+    background: transparent url("../img/cirqueHorse.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  63% {
+    background: transparent url("../img/cirqueHorse.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  66% {
+    background: transparent url("../img/ascend.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  97% {
+    background: transparent url("../img/ascend.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  100% {
+    background: transparent url("../img/branchClippers.jpg") left top no-repeat;
+    background-size: cover;
+    background-position: center center; } }
+
 /* GENERICS */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -81,9 +146,16 @@ body {
   min-width: 40%;
   min-height: 100vh;
   border-right: 0.1rem solid rgba(151, 103, 88, 0.5);
-  background: transparent url("../img/branchClippers.jpg") left top no-repeat;
+  -webkit-animation-name: preview;
+          animation-name: preview;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
   background-size: cover;
-  background-position: center center; }
+  background-position: 98% center; }
 
 .mainContent, .mainContentGalery {
   -webkit-box-flex: 1;
@@ -108,7 +180,10 @@ body {
 
 .mainTitle {
   text-align: center;
-  font-size: 6rem;
+  font-family: "condimentregular", serif;
+  font-size: 7rem;
+  letter-spacing: 0.3rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
   padding-bottom: 2rem;
   border-bottom: 0.2rem solid #976758; }
@@ -124,6 +199,7 @@ body {
     color: #976758; }
   .mainTitle__subtitle {
     font-size: .5em;
+    letter-spacing: 0.2rem;
     margin-top: 1rem;
     text-transform: uppercase; }
 
@@ -156,7 +232,6 @@ body {
     font-weight: 400; }
 
 .mainNav {
-  min-width: 85rem;
   width: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -178,33 +253,26 @@ body {
     height: 10rem;
     margin-bottom: 5rem; }
   .mainNav__item {
-    min-width: 20rem;
+    min-width: 18rem;
     height: 8rem;
     text-align: center;
-    background: rgba(142, 156, 100, 0.3);
-    border: 1px solid #8E9C64;
-    box-shadow: none;
-    -webkit-transition: min-width .25s ease-in-out, height .25s ease-in-out, box-shadow .25s ease-in-out;
-    transition: min-width .25s ease-in-out, height .25s ease-in-out, box-shadow .25s ease-in-out; }
+    border-left: 0.1rem solid #8E9C64;
+    border-right: 0.1rem solid #8E9C64;
+    transition: border .25s ease-in-out, background .25s ease-in-out; }
     .mainNav__item:hover {
-      min-width: 23rem;
-      height: 10rem;
-      box-shadow: 0 0 0.5rem #555; }
-    .mainNav__item:hover .mainNav__link {
-      padding-top: 4.2rem;
-      padding-bottom: 4.2rem; }
+      background: rgba(142, 156, 100, 0.2); }
   .mainNav__link {
     display: block;
     width: 100%;
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
+    font-family: "condimentregular", serif;
+    letter-spacing: .2rem;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: .05rem;
-    color: #976758;
-    -webkit-transition: padding-top .25s ease-in-out, padding-bottom .25s ease-in-out;
+    color: #8E9C64;
     transition: padding-top .25s ease-in-out, padding-bottom .25s ease-in-out; }
 
 .utils {
@@ -223,12 +291,16 @@ body {
           align-items: flex-start;
   margin-bottom: 5rem;
   font-size: 2rem;
+  line-height: 1.5;
   font-weight: 200; }
   .utils__title {
     width: 50%;
-    font-size: 4rem;
+    font-size: 4.5rem;
+    font-family: "condimentregular", serif;
+    letter-spacing: .1rem;
+    color: #976758;
     margin-bottom: 5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     border-bottom: 0.1rem solid #976758; }
   .utils__content {
     display: -webkit-box;
@@ -243,14 +315,23 @@ body {
             justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start; }
+            align-items: flex-start;
+    width: 100%; }
+  .utils .subList {
+    position: relative;
+    top: -3.1rem;
+    left: 22%; }
   .utils__item {
     margin-bottom: 1rem; }
   .utils__strong {
-    font-weight: 400; }
-
-.galeryNav {
-  max-width: 104.6rem; }
+    font-weight: 400;
+    color: #976758; }
+  .utils__em {
+    font-weight: 400;
+    color: #111; }
+  .utils__maps {
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
 
 .lightBox {
   display: none;
@@ -265,13 +346,15 @@ body {
   .lightBox__pic {
     display: block;
     margin: 0 auto;
-    -webkit-transform: translateY(20rem);
-            transform: translateY(20rem); }
+    padding: 1rem;
+    border: 0.5rem solid rgba(142, 156, 100, 0.7);
+    background: rgba(251, 251, 251, 0.7); }
   .lightBox:target {
     outline: none;
-    display: block;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5); }
+    display: block; }
+  .lightBox:target .lightBox__pic {
+    -webkit-transform: scale(1.4) translateY(20vh);
+            transform: scale(1.4) translateY(20vh); }
 
 .footer {
   width: 100%;
@@ -286,7 +369,7 @@ body {
     color: #8E9C64; }
 
 .contact {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 5rem; }
   .contact__title {
     display: block;
@@ -294,8 +377,15 @@ body {
     margin: 0 auto;
     margin-bottom: 2.5rem;
     text-align: center;
-    font-size: 4rem;
+    font-size: 4.5rem;
+    font-family: "condimentregular", serif;
+    letter-spacing: .1rem;
     color: #976758; }
+  .contact__text {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: 5rem; }
   .contact__form {
     width: 100%; }
   .contact__champs {
@@ -314,26 +404,30 @@ body {
             align-items: flex-start;
     margin-bottom: 2rem; }
   .contact__label {
-    width: 15rem;
-    height: 3rem;
-    background: #8E9C64;
-    padding: .5rem;
-    text-align: left;
-    border: 2px solid #8E9C64; }
+    width: 12rem;
+    height: 2.5rem;
+    background: rgba(142, 156, 100, 0.7);
+    padding: .7rem;
+    padding-right: 2rem;
+    border-right: 0.5rem solid rgba(142, 156, 100, 0.8);
+    text-align: right;
+    color: white; }
   .contact__input {
     width: 40rem;
-    height: 3rem;
+    height: 2.5rem;
     font-size: 2rem;
-    padding: .5rem;
+    padding: .7rem;
     margin-left: 0;
-    border: 2px solid #8E9C64; }
+    border: none;
+    background: rgba(142, 156, 100, 0.2); }
   .contact__textarea {
     width: 40rem;
     height: 30rem;
     font-family: "Futura LT", Verdana, sans-serif;
     font-size: 2rem;
-    padding: .5rem;
-    border: 2px solid #8E9C64; }
+    padding: .7rem;
+    border: none;
+    background: rgba(142, 156, 100, 0.2); }
   .contact__input:focus, .contact__textarea:focus {
     outline: none;
     background: rgba(142, 156, 100, 0.1); }
@@ -341,16 +435,15 @@ body {
     display: block;
     margin: 0 auto;
     padding: 0;
-    background: #8E9C64;
-    width: 57.8rem;
+    background: rgba(142, 156, 100, 0.7);
+    width: 56.6rem;
     height: 6rem;
     font-family: "Futura LT", Verdana, sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     border: none;
     border-radius: none;
     box-shadow: none;
-    -webkit-transition: box-shadow .251s ease-in-out;
-    transition: box-shadow .251s ease-in-out; }
+    transition: box-shadow .25s ease-in-out; }
   .contact__submit:hover {
     box-shadow: 0 0 0.5rem #555; }
   .contact__submit:hover, .contact__label:hover {
@@ -367,17 +460,27 @@ body {
     margin: 0 auto;
     margin-bottom: 2.5rem;
     text-align: center;
-    font-size: 4rem;
+    font-family: "condimentregular", serif;
+    font-size: 4.5rem;
+    letter-spacing: .1rem;
     color: #976758; }
   .bio__content {
     -webkit-columns: 2 30rem;
-       -moz-columns: 2 30rem;
             columns: 2 30rem;
     -webkit-column-gap: 5rem;
-       -moz-column-gap: 5rem;
             column-gap: 5rem; }
   .bio__paragraph {
     margin-bottom: 2.6rem; }
+  .bio__strong {
+    font-weight: 400; }
+  .bio__em {
+    font-style: italic; }
+  .bio__profil {
+    width: 40rem;
+    height: 50rem;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    overflow: hidden; }
   .bio__picture {
     min-width: 30rem;
     min-height: auto; }
@@ -392,7 +495,9 @@ body {
     margin: 0 auto;
     margin-bottom: 2.5rem;
     text-align: center;
-    font-size: 4rem;
+    font-size: 4.5rem;
+    font-family: "condimentregular", serif;
+    letter-spacing: .1rem;
     color: #976758; }
   .galery__pics {
     width: 100%;
@@ -413,8 +518,8 @@ body {
         -ms-flex-align: center;
             align-items: center; }
   .galery__picDiv {
-    min-width: 30rem;
-    margin-bottom: 5rem;
+    max-width: 25rem;
+    margin-bottom: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -423,7 +528,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     margin: auto;
-    border: 0.7rem solid rgba(151, 103, 88, 0.3); }
+    border: 0.3rem solid rgba(142, 156, 100, 0.3); }
 
 /* COMPONENTS */
 /* TRUMPS */

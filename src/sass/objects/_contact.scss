@@ -1,5 +1,5 @@
 .contact{
-	font-size: 3rem;
+	font-size: 2.5rem;
 	margin-bottom: 5rem;
 	&__title{
 		display: block;
@@ -7,8 +7,17 @@
 		margin: 0 auto;
 		margin-bottom: 2.5rem;
 		text-align: center;
-		font-size: 4rem;
+		font-size: 4.5rem;
+		font-family: $titleFonts;
+		letter-spacing: .1rem;
 		color: $titleColor;
+	}
+
+	&__text{
+		font-size: 2rem;
+		font-weight: 200;
+		line-height: 1.5;
+		margin-bottom: 5rem;
 	}
 
 	&__form{
@@ -24,21 +33,25 @@
 	}
 
 	&__label{
-		width: 15rem;
-		height: 3rem;
-		background: $linkColor;
-		padding: .5rem;
-		text-align: left;
-		border: 2px solid $linkColor;
+		width: 12rem;
+		height: 2.5rem;
+		background: rgba($linkColor, .7);
+		padding: .7rem;
+		padding-right: 2rem;
+		border-right: .5rem solid rgba($linkColor, .8);
+		text-align: right;
+		color: white;
 	}
 
 	&__input{
 		width: 40rem;
-		height: 3rem;
+		height: 2.5rem;
 		font-size: 2rem;
-		padding: .5rem;
+		padding: .7rem;
 		margin-left: 0;
-		border: 2px solid $linkColor;
+		// border: .2rem solid $linkColor;
+		border: none;
+		background: rgba($linkColor, .2);
 	}
 
 	&__textarea{
@@ -46,8 +59,10 @@
 		height: 30rem;
 		font-family: $mainFonts;
 		font-size: 2rem;
-		padding: .5rem;
-		border: 2px solid $linkColor;
+		padding: .7rem;
+		// border: .2rem solid $linkColor;
+		border: none;
+		background: rgba($linkColor, .2);
 	}
 
 	&__input:focus, &__textarea:focus{
@@ -59,15 +74,15 @@
 		display: block;
 		margin: 0 auto;
 		padding: 0;
-		background: $linkColor;
-		width: 57.8rem;
+		background: rgba($linkColor, .7);
+		width: 56.6rem;
 		height: 6rem;
 		font-family: $mainFonts;
-		font-size: 3rem;
+		font-size: 2rem;
 		border: none;
 		border-radius: none;
 		box-shadow: none;
-		transition: box-shadow .251s ease-in-out;
+		transition: box-shadow .25s ease-in-out;
 	}
 
 	&__submit:hover{

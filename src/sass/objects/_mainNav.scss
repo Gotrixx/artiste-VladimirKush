@@ -1,5 +1,4 @@
 .mainNav{
-	min-width: 85rem;
 	// max-width: 104.6rem;
 	width: 100%;
 	align-self: center;
@@ -14,25 +13,19 @@
 	}
 
 	&__item{
-		min-width: 20rem;
+		min-width: 18rem;
 		height: 8rem;
 		text-align: center;
-		background: rgba($linkColor, .3);// au hover mettre un fond avec un croix (diagonales) (SVG ?)
-		border: 1px solid $linkColor;
-		box-shadow: none;
-		transition: min-width .25s ease-in-out,
-					height .25s ease-in-out,
-					box-shadow .25s ease-in-out;
+		border-left: .1rem solid $linkColor;
+		border-right: .1rem solid $linkColor;
+		transition: border .25s ease-in-out,
+					background .25s ease-in-out;
 
 		&:hover{
-			min-width: 23rem;
-			height: 10rem;
-			box-shadow: 0 0 .5rem $shadow;
-		}
-
-		&:hover .mainNav__link{
-			padding-top: 4.2rem;
-			padding-bottom: 4.2rem;
+			// min-width: 21rem;// ne pas aggrandir
+			// border-left: .3rem solid $linkColor;
+			// border-right: .3rem solid $linkColor;
+			background: rgba($linkColor, .2);
 		}
 	}
 
@@ -41,12 +34,13 @@
 		width: 100%;
 		padding-top: 3.2rem;
 		padding-bottom: 3.2rem;
-		font-size: 1.6rem;
+		font-size: 2.2rem;
+		font-family: $titleFonts;
+		letter-spacing: .2rem;
 		font-weight: 600;
 		text-decoration: none;
 		text-transform: uppercase;
-		letter-spacing: .05rem;
-		color: $titleColor;
+		color: $linkColor;
 		transition: padding-top .25s ease-in-out,
 					padding-bottom .25s ease-in-out;
 	}

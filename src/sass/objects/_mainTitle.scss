@@ -1,6 +1,9 @@
 .mainTitle{
 	text-align: center;
-	font-size: 6rem;
+	font-family: $titleFonts;
+	font-size: 7rem;
+	letter-spacing: 0.3rem;
+	margin-top: 2rem;
 	margin-bottom: 5rem;
 	padding-bottom: 2rem;
 	border-bottom: .2rem solid $titleColor;
@@ -14,6 +17,7 @@
 
 	&__subtitle{
 		font-size: .5em;
+		letter-spacing: 0.2rem;
 		margin-top: 1rem;
 		text-transform: uppercase;
 	}
